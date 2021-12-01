@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repertoire</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="static/css/grid.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
@@ -22,7 +24,7 @@
                 
                 <div class="col m-8 header-block-links">
                     <a class="header-link" href="#">
-                        <i class="header-icon fas fa-user-tie"></i>
+                        <i class="header-icon fas fa-tags"></i>
                         <span class="header-text">AdminTags</span>
                     </a>
                     <a class="header-link" href="#">
@@ -30,8 +32,12 @@
                         <span class="header-text">Status</span>
                     </a>
                     <a class="header-link" href="#">
-                        <i class="header-icon far fa-comments"></i>
+                        <i class="header-icon fas fa-check"></i>
                         <span class="header-text">Recommendation</span>
+                    </a>
+                    <a class="header-link" href="#">
+                        <i class="header-icon fas fa-user-circle"></i>
+                        <span class="header-text">User's name</span>
                     </a>
                 </div>
             </div>
@@ -41,7 +47,7 @@
     <div class="container">
         <div class="container-repertoire-info">
             <div class="grid wide">
-                <h2 class="repertoire-info-title">Информация о спектакле Святочный рассказ с привидениями</h2>
+                <h2 class="repertoire-info-title">Информация о спектакле <span>Святочный рассказ с привидениями</span></h2>
                 <div class="row">
                     <div class="col l-5 repertoire-info-slideshow">
                         <div class="repertoire-info-item">
@@ -84,7 +90,7 @@
         <div class="container-rating">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-5">
+                    <div data-aos="fade-up" class="col l-5">
                         <div class="container-rating-form">
                             <div class="container-rating-form__stars ">
                                 <i data-id="1" class="fas fa-star container-rating-form__stars-icon"></i>
@@ -101,7 +107,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col l-7">
+                    <div data-aos="fade-down" class="col l-7">
                         <div class="container-rating-stars">
                             <h3 class="container-rating-stars__user">Рейтинг пользователей: <span class="container-rating-stars__score">4.3</span></h3>
                             <img src="https://rating.ringostat.ru/wp-content/themes/ratings/dist/images/about.svg" alt="" class="container-rating-stars__image">
@@ -111,14 +117,14 @@
             </div>
         </div>
 
-        <div class="container-comment">
+        <div data-aos="fade-up" class="container-comment">
             <div class="grid wide">
                 <h2 class="container-comment__title">
                     Комментарий
                 </h2>
                 <div class="row container-comment__user">
                     <div class="col l-1 container-comment__user-image">
-                        <img src="static/avatars/avatar-default.png" alt="">
+                        <img src="static/avatars/user.svg" alt="">
                     </div>
                     <div class="col l-11 container-comment__user-block">
                         <div class="container-comment__user-sub-block">
@@ -134,7 +140,7 @@
                 </div>
                 <div class="row container-comment__user">
                     <div class="col l-1 container-comment__user-image">
-                        <img src="static/avatars/avatar-default.png" alt="">
+                        <img src="static/avatars/user.svg" alt="">
                     </div>
                     <div class="col l-11 container-comment__user-block">
                         <div class="container-comment__user-sub-block">
@@ -214,6 +220,12 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
     <script>
         // Slide show
         const WIDTH_IMAGE = document.querySelector(".repertoire-info-item").offsetWidth

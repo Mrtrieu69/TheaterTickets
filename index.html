@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="static/css/grid.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
@@ -22,7 +24,7 @@
                 
                 <div class="col l-8 header-block-links">
                     <a class="header-link" href="#">
-                        <i class="header-icon fas fa-user-tie"></i>
+                        <i class="header-icon fas fa-tags"></i>
                         <span class="header-text">AdminTags</span>
                     </a>
                     <a class="header-link" href="#">
@@ -30,7 +32,7 @@
                         <span class="header-text">Status</span>
                     </a>
                     <a class="header-link" href="#">
-                        <i class="header-icon far fa-comments"></i>
+                        <i class="header-icon fas fa-check"></i>
                         <span class="header-text">Recommendation</span>
                     </a>
                     <a class="header-link" href="#">
@@ -53,7 +55,7 @@
         <div class="section-content">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-4 repertoire">
+                    <div data-aos="fade-right" class="col l-4 repertoire">
                         <div class="repertoire-block">
                             <div class="repertoire-image">
                                 <img class="repertoire-image" src="https://sun9-18.userapi.com/impg/MWIUkswmgEZh9EURZV_rb4lRoZXTj-H5Ze2x8g/LdbzUjyojGw.jpg?size=1680x1120&quality=96&sign=16f79af3081ac0c81045cc8a5b2832c1&type=album" alt="">
@@ -66,7 +68,7 @@
                             </span>
                         </div>
                     </div> 
-                    <div class="col l-4 repertoire">
+                    <div data-aos="fade-up" class="col l-4 repertoire">
                         <div class="repertoire-block">
                             <div class="repertoire-image">
                                 <img class="repertoire-image" src="https://sun9-14.userapi.com/impg/R2s11VWkJTuQf6dDib9AF_dvjZ8G5pHvAoBC8w/WBQ8k7g9-aE.jpg?size=1024x683&quality=96&sign=dae01338bbc47c87b4c5b14a18538ada&type=album" alt="">
@@ -80,7 +82,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="col l-4 repertoire">
+                    <div data-aos="fade-left" class="col l-4 repertoire">
                         <div class="repertoire-block">
                             <div class="repertoire-image">
                                 <img src="https://sun9-62.userapi.com/impg/dYt4sgTisw2hWXCf-mvhF0mZ6AQH8VtmusK4NA/9nUynC7ORNc.jpg?size=1800x1200&quality=96&sign=669e4d4b4a402cf4e40ea3466fc3fe69&type=album" alt="">
@@ -153,6 +155,39 @@
         </div>
     </footer>
 
-    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+    <script>
+        const btnSend = document.querySelector(".contact-form__submit")
+        var interval = setInterval(growth, 200)
+        var i = 0
+        function growth(){  
+            i++
+            if(i % 2 === 0){
+                btnSend.style.transform = "scale(1)"
+            }else{
+                btnSend.style.transform = "scale(1.1)"
+            }
+            if(i === 400){
+                clearTimeout(interval)
+                btnSend.transform = "scale(1)"
+            }
+        }
+
+        btnSend.addEventListener("mouseover",(e)=>{
+            clearTimeout(interval)
+            e.target.style.transform = "scale(1.1)"
+        })
+
+        btnSend.addEventListener("mouseleave",(e)=>{
+            e.target.style.transform = "scale(1)"
+        })
+    </script>
 </body>
+
+
 </html>
