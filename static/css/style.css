@@ -410,6 +410,35 @@ footer{
     text-align: justify;
 }
 
+
+
+.repertoire-info__btn-visit{
+    padding: 8px 16px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(211, 211, 211);
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    float: right;
+}
+
+.repertoire-info__btn-visited{
+    padding: 8px 16px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(211, 211, 211);
+    cursor: pointer;
+    background-color: white;
+    float: right;
+    margin-right: 20px;
+}
+
+.repertoire-info__btn-visit:hover,
+.repertoire-info__btn-visited:hover{
+    background-color: #ff7f6c;
+}
+
 .repertoire-info__about{
     position: absolute;
     right: 0;
