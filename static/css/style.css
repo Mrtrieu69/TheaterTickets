@@ -9,10 +9,6 @@ html{
 body{
     font-family: "Geometria", Arial;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
 
 /* Register - Login */
 .login-form,
@@ -791,6 +787,10 @@ footer{
     animation: zoom ease 0.5s;
 }
 
+.profile-sidebar__info-list a{
+    text-decoration: none;
+    color: black;
+}
 .profile-sidebar__info-item{
     cursor: pointer;
     padding: 4px 0;
@@ -804,6 +804,8 @@ footer{
 }
 
 .profile-favorites-block{
+    text-decoration: none;
+    color: black;
     padding: 20px;
     background-color: #f6f1e9;
     margin-left: 24px;
